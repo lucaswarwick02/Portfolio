@@ -3,24 +3,34 @@
 <html>
     <head>
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <script type="text/babel" src="/js/main.js"></script>
+        <!-- Load React. -->
+        <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
     </head>
     <body>
         <!-- Side Bar -->
         <div class="sidebar">
+            <div>
+                <h1>Lucas Warwick</h1>
+                <h2>Portfolio</h2>
+            </div>
             <div class="links">
-                <p id=0>About Me</p>
-                <p id=1>Projects</p>
-                <p id=2>Education</p>
+                <p id=0 onclick="updatePage(this)">About Me</p>
+                <p id=1 onclick="updatePage(this)">Projects</p>
+                <p id=2 onclick="updatePage(this)">Education</p>
             </div>
         </div>
 
         <!-- Main Page -->
         <div class="main">
-            <h1>Hello World!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent turpis ex, convallis in fermentum ut, ullamcorper id elit. Proin scelerisque tellus quis nisi tincidunt, non suscipit libero faucibus. Morbi magna risus, consequat at pulvinar quis, mollis non elit. Mauris id rhoncus ligula. Nulla a posuere leo. Curabitur at dictum felis. Maecenas sodales, nulla a blandit porta, ex lacus ultrices nisl, id tristique elit dui condimentum risus. Curabitur aliquet, tortor eu facilisis varius, dolor leo lobortis nulla, quis tincidunt libero felis et est. Suspendisse massa dui, congue et iaculis quis, tincidunt eget nisi. Nulla facilisi. Vestibulum vel quam et ligula aliquam efficitur. Nullam dictum nisi vitae interdum auctor. Duis non vehicula quam. Maecenas auctor, metus et facilisis posuere, dui neque pretium lorem, sit amet iaculis purus massa porttitor velit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent turpis ex, convallis in fermentum ut, ullamcorper id elit. Proin scelerisque tellus quis nisi tincidunt, non suscipit libero faucibus. Morbi magna risus, consequat at pulvinar quis, mollis non elit. Mauris id rhoncus ligula. Nulla a posuere leo. Curabitur at dictum felis. Maecenas sodales, nulla a blandit porta, ex lacus ultrices nisl, id tristique elit dui condimentum risus. Curabitur aliquet, tortor eu facilisis varius, dolor leo lobortis nulla, quis tincidunt libero felis et est. Suspendisse massa dui, congue et iaculis quis, tincidunt eget nisi. Nulla facilisi. Vestibulum vel quam et ligula aliquam efficitur. Nullam dictum nisi vitae interdum auctor. Duis non vehicula quam. Maecenas auctor, metus et facilisis posuere, dui neque pretium lorem, sit amet iaculis purus massa porttitor velit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent turpis ex, convallis in fermentum ut, ullamcorper id elit. Proin scelerisque tellus quis nisi tincidunt, non suscipit libero faucibus. Morbi magna risus, consequat at pulvinar quis, mollis non elit. Mauris id rhoncus ligula. Nulla a posuere leo. Curabitur at dictum felis. Maecenas sodales, nulla a blandit porta, ex lacus ultrices nisl, id tristique elit dui condimentum risus. Curabitur aliquet, tortor eu facilisis varius, dolor leo lobortis nulla, quis tincidunt libero felis et est. Suspendisse massa dui, congue et iaculis quis, tincidunt eget nisi. Nulla facilisi. Vestibulum vel quam et ligula aliquam efficitur. Nullam dictum nisi vitae interdum auctor. Duis non vehicula quam. Maecenas auctor, metus et facilisis posuere, dui neque pretium lorem, sit amet iaculis purus massa porttitor velit.</p>
+            <div class="content">
+                <div id="sectionTitle"></div>
+                <div id="sectionContents"></div>
+            </div>
         <div>
     </body>
 </html>
