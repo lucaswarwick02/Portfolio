@@ -51,6 +51,14 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+#profilepicture {
+    border-radius: 50%;
+    /*border: 4px solid #bdbdbd;
+    border-radius: 5px;*/
+    max-width: 50%;
+    height: auto;
+}
   
 /* Style page content */
 .main {
@@ -88,4 +96,19 @@ body {
 
 #pageTitle {
     text-decoration: underline;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 20%;
+    padding: 5px;
+}
+
+.mask {
+    width: 130%;
+    height: auto;
+    border-radius: 5%;
 }
